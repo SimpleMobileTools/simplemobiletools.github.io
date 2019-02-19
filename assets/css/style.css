@@ -154,3 +154,9 @@ footer {
     }
 }
 
+@media screen and (max-width: 576px) {
+    .app_title {
+        font-size: 1.6rem;
+    }
+}
+
