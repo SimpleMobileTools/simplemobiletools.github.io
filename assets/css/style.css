@@ -5,8 +5,16 @@
 }
 
 h1,
-h2 {
+h2,
+.jumbotron-heading {
     color: #424242;
+}
+
+.jumbotron-heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    font-weight: 500;
 }
 
 .text-muted {
@@ -95,6 +103,11 @@ footer {
 .sociallogo {
     height: 30px;
     margin-bottom: 20px;
+}
+
+.patreon_icon {
+    height: 42px;
+    width: auto;
 }
 
 .donate {
