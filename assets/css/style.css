@@ -1,0 +1,150 @@
+.jumbotron {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+h1,
+h2 {
+    color: #424242;
+}
+
+.text-muted {
+    color: #7c7c7c!important;
+}
+
+.top-logo > img {
+    width: 80px;
+    height: auto;
+    margin: 25px 0 15px 0;
+}
+
+.app_img {
+    width: 100%;
+    height: auto;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+}
+
+.app_icon {
+    width: 20%;
+    height: 0;
+    margin-left: 40%;
+    margin-top: 60%;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.donate_app_icon {
+    height: 60px;
+    width: auto;
+}
+
+.gp_badge {
+    width: 64%;
+    margin-left: 18%;
+    margin-top: 110%;
+}
+
+.github_badge {
+    width: 18%;
+    margin-left: 41%;
+    margin-top: 140%;
+}
+
+.gp_badge,
+.github_badge {
+    height: 0;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.gp_badge > img,
+.github_badge > img,
+.app_icon > img {
+    width: 100%;
+    height: auto;
+}
+
+.app_title {
+    position: absolute;
+    width: 100%;
+    bottom: 70%;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30%;
+    padding: 0 10px;
+    color: #424242;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.sociallogo {
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.donate {
+    text-align: center;
+    color: #424242;
+}
+
+.donate p {
+    margin: 5px;
+    overflow-wrap: break-word;
+}
+
+.crypto_img {
+    width: 100px;
+    height: 100px;
+}
+
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #F57C00;
+    border-color: #F57C00;
+}
+
+.btn-primary:hover {
+    background-color: #D76D00;
+    border-color: #D76D00;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(245, 124, 0, .5);
+}
+
+.btn-secondary,
+.btn-secondary:not(:disabled):not(.disabled):active {
+    background-color: #424242;
+    border-color: #424242;
+}
+
+.btn-secondary:hover {
+    background-color: #252525;
+    border-color: #252525;
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(66, 66, 66, .5);
+}
+
+@media screen and (min-width:768px) {
+    .donate {
+        max-width: 600px;
+    }
+}
+
