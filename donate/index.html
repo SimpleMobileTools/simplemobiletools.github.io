@@ -17,12 +17,23 @@
     <meta property="og:title" content="Simple Mobile Tools" />
     <meta property="og:description" content="A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions." />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72021652-1"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            if (window.location.protocol != "https:" && window.location.hostname != "localhost") {
-                window.location = 'https://' + window.location.hostname + window.location.pathname + window.location.hash;
-            }
-        }, false);
+      document.addEventListener('DOMContentLoaded', function(){
+          if (window.location.protocol != "https:" && window.location.hostname != "localhost") {
+              window.location = 'https://' + window.location.hostname + window.location.pathname + window.location.hash;
+          }
+      }, false);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-72021652-1');
+
+      function sendEvent(label) {
+          gtag('event', 'click', {'event_category': 'buttons', 'event_action': 'click', 'event_label': label});
+      }
     </script>
   </head>
 
@@ -30,14 +41,14 @@
     <main>
       <header class="jumbotron text-center">
         <div class="container">
-          <a class="top-logo" href="https://simplemobiletools.com" onclick="ga('send', 'event', 'buttons', 'click', 'top_logo_donate');">
+          <a class="top-logo" href="https://simplemobiletools.com" onclick="sendEvent('top_logo_donate');">
             <img alt="Simple Mobile Tools" src="../assets/images/logo_small.png" />
           </a>
           <div class="jumbotron-heading">Simple Mobile Tools</div>
           <p class="lead text-muted">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</p>
           <p>
-            <a href="https://medium.com/@tibbi/why-did-i-create-simple-mobile-tools-f3aa22815aa4" class="btn btn-primary" onclick="ga('send', 'event', 'buttons', 'click', 'mission_donate');">Our mission</a>
-            <a href="https://simplemobiletools.com/donate" class="btn btn-secondary my-2" onclick="ga('send', 'event', 'buttons', 'click', 'support_donate');">Support us</a>
+            <a href="https://medium.com/@tibbi/why-did-i-create-simple-mobile-tools-f3aa22815aa4" class="btn btn-primary" onclick="sendEvent('mission_donate');">Our mission</a>
+            <a href="https://simplemobiletools.com/donate" class="btn btn-secondary my-2" onclick="sendEvent('support_donate');">Support us</a>
           </p>
         </div>
       </header>
@@ -49,13 +60,13 @@
           IBAN: SK4083300000002000965231<br>
           BIC/SWIFT: FIOZSKBAXXX</p><br>
 
-          <p><a href="https://www.patreon.com/tiborkaputa" onclick="ga('send', 'event', 'buttons', 'click', 'patreon');"><img class="patreon_icon" src="../assets/images/patron.png" alt="Patreon icon"/></a></p><br>
+          <p><a href="https://www.patreon.com/tiborkaputa" onclick="sendEvent('patreon');"><img class="patreon_icon" src="../assets/images/patron.png" alt="Patreon icon"/></a></p><br>
 
           <p>Paypal (euros)</p>
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="EHNHB4NCQFV3N">
-            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online!" onclick="ga('send', 'event', 'buttons', 'click', 'paypal_eu');">
+            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online!" onclick="sendEvent('paypal_eu');">
             <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
           </form><br>
 
@@ -63,7 +74,7 @@
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="JKGP999PUQ7TA">
-            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" onclick="ga('send', 'event', 'buttons', 'click', 'paypal_us');">
+            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" onclick="sendEvent('paypal_us');">
             <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
           </form><br>
 
@@ -80,42 +91,28 @@
           <p>LYACbHTKaM9ZubKQGxJ4NRyVy1gHUuztRP</p><br>
 
           <p>Download our paid apps</p>
-          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro" onclick="ga('send', 'event', 'buttons', 'click', 'gallery_donate');"><img class="donate_app_icon" src="/assets/images/gallery_icon.png" alt="Gallery icon"/></a>
-          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.calendar.pro" onclick="ga('send', 'event', 'buttons', 'click', 'calendar_donate');"><img class="donate_app_icon" src="../assets/images/calendar_icon.png" alt="Calendar icon"/></a>
-          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.contacts.pro" onclick="ga('send', 'event', 'buttons', 'click', 'contacts_donate');"><img class="donate_app_icon" src="/assets/images/contacts_icon.png" alt="Contacts icon"/></a>
-          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.draw.pro" onclick="ga('send', 'event', 'buttons', 'click', 'draw_donate');"><img class="donate_app_icon" src="/assets/images/draw_icon.png" alt="Draw icon"/></a>
-          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager.pro" onclick="ga('send', 'event', 'buttons', 'click', 'filemanager_donate');"><img class="donate_app_icon" src="/assets/images/file_manager_icon.png" alt="File Manager icon"/></a>
-          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.notes.pro" onclick="ga('send', 'event', 'buttons', 'click', 'notes_donate');"><img class="donate_app_icon" src="/assets/images/notes_icon.png" alt="Notes icon"/></a>
-          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou" onclick="ga('send', 'event', 'buttons', 'click', 'thankyou_donate');"><img class="donate_app_icon" src="/assets/images/thank_you_icon.png" alt="Thank You icon"/></a>
+          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro" onclick="sendEvent('gallery_donate');"><img class="donate_app_icon" src="/assets/images/gallery_icon.png" alt="Gallery icon"/></a>
+          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.calendar.pro" onclick="sendEvent('calendar_donate');"><img class="donate_app_icon" src="../assets/images/calendar_icon.png" alt="Calendar icon"/></a>
+          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.contacts.pro" onclick="sendEvent('contacts_donate');"><img class="donate_app_icon" src="/assets/images/contacts_icon.png" alt="Contacts icon"/></a>
+          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.draw.pro" onclick="sendEvent('draw_donate');"><img class="donate_app_icon" src="/assets/images/draw_icon.png" alt="Draw icon"/></a>
+          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager.pro" onclick="sendEvent('filemanager_donate');"><img class="donate_app_icon" src="/assets/images/file_manager_icon.png" alt="File Manager icon"/></a>
+          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.notes.pro" onclick="sendEvent('notes_donate');"><img class="donate_app_icon" src="/assets/images/notes_icon.png" alt="Notes icon"/></a>
+          <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou" onclick="sendEvent('thankyou_donate');"><img class="donate_app_icon" src="/assets/images/thank_you_icon.png" alt="Thank You icon"/></a>
         </div>
         <br><br>
       </div>
     </main>
 
     <footer class="text-muted text-center text-small">
-      <a href="https://www.facebook.com/simplemobiletools" onclick="ga('send', 'event', 'buttons', 'click', 'fb_donate');"><img class="sociallogo" src="/assets/images/facebook.svg" alt="Facebook icon"></a> &nbsp;
-      <a href="https://www.reddit.com/r/SimpleMobileTools"  onclick="ga('send', 'event', 'buttons', 'click', 'reddit_donate');"><img class="sociallogo" src="/assets/images/reddit.svg" alt="Reddit icon"></a> &nbsp;
-      <a href="https://github.com/SimpleMobileTools" onclick="ga('send', 'event', 'buttons', 'click', 'github_donate');"><img class="sociallogo" src="/assets/images/github.svg" alt="Github icon"></a> &nbsp;
-      <a href="https://play.google.com/store/apps/dev?id=9070296388022589266" onclick="ga('send', 'event', 'buttons', 'click', 'gp_donate');"><img class="sociallogo" src="/assets/images/google_play.svg" alt="Google Play icon"></a>
+      <a href="https://www.facebook.com/simplemobiletools" onclick="sendEvent('fb_donate');"><img class="sociallogo" src="/assets/images/facebook.svg" alt="Facebook icon"></a> &nbsp;
+      <a href="https://www.reddit.com/r/SimpleMobileTools"  onclick="sendEvent('reddit_donate');"><img class="sociallogo" src="/assets/images/reddit.svg" alt="Reddit icon"></a> &nbsp;
+      <a href="https://github.com/SimpleMobileTools" onclick="sendEvent('github_donate');"><img class="sociallogo" src="/assets/images/github.svg" alt="Github icon"></a> &nbsp;
+      <a href="https://play.google.com/store/apps/dev?id=9070296388022589266" onclick="sendEvent('gp_donate');"><img class="sociallogo" src="/assets/images/google_play.svg" alt="Google Play icon"></a>
       <p>
         Replacing your Android apps one by one since 2016<br>
         Copyright &copy; 2019
       </p>
     </footer>
-
-    <script>
-      if(window == window.top) document.body.style.display = "block"; else window.top.location = window.location;
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-72021652-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </body>
 </html>
 
